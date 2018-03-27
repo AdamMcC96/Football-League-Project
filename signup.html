@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" a href="css\login.css">
+    <link rel="stylesheet" a href="css\font-awesome.min.css">
+</head>
+<body>
+<ul>
+    <li><a href="index.html">Home</a></li>
+</ul>
+<div class="container">
+    <img src="img/user.png"/>
+    <form class="singup-form" action="signup.php" method="POST">
+        <input type="text" name="first" placeholder="Firstname">
+        <input type="text" name="last" placeholder="Lastname"><br>
+        <input type="date" name="DOB" placeholder="Date of Birth"><br>
+        <input type="text" name="email" placeholder="E-mail">
+        <input type="password" name="pass" placeholder="Password">
+        <input type="text" name="uid" placeholder="User ID"> <br>
+        <input type="radio" name="user" placeholder="Player" checked> Player
+        <input type="radio" name="user" placeholder="Referee"> Referee
+        <input type="radio" name="user" placeholder="Manager"> Manager <br>
+        <br>
+        <button type="submit" name="submit">Sign Up</button>
+    </form>
+</div>
+</body>
+</html>
