@@ -2,20 +2,55 @@
 /**
  * User: Adam
  */
-// URGENT: MOVE TO FOOTBALL LEAGUE FOLDER
 
 if (isset($_POST['submit'])) { // if submit was pressed
     include_once 'leaguedb.php';
     $first = mysqli_real_escape_string($conn, $_POST['first']); // adds first name to datbase (all code is converted to text for security)
     $last = mysqli_real_escape_string($conn, $_POST['last']); // adds first name to datbase (all code is converted to text for security)
-    $dob = mysqli_real_escape_string($conn, $_POST['dob']); // adds first name to datbase (all code is converted to text for security)
+    $dob = mysqli_real_escape_string($conn, $_POST['DOB']); // adds first name to datbase (all code is converted to text for security)
     $email = mysqli_real_escape_string($conn, $_POST['email']); // adds email to datbase (all code is converted to text for security)
     $pass = mysqli_real_escape_string($conn, $_POST['pass']); // adds pass to datbase (all code is converted to text for security)
     $uid = mysqli_real_escape_string($conn, $_POST['uid']); // adds uid to datbase (all code is converted to text for security)
     $user = mysqli_real_escape_string($conn, $_POST['user']); // adds user to datbase (all code is converted to text for security)
 
+    $playerUser = "Player";
+    if ($user == "Player"){
+        $sql = "INSER INTO players VALUES (?, ?, ?, ?, ? , ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            echo "SQL error 1";
+        }
+        else {
+            mysqli_stmt_bind_param($stmt, "sssssss",$uid,$first, $dob, $last, $email, $pass); // hash pass
+            mysqli_stmt_execute($stmt);
+        }
+    }
+    elseif ($user == "Referee"){
+        $sql = "INSER INTO referee VALUES (?, ?, ?, ?, ? , ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            echo "SQL error 2";
+        }
+        else {
+            mysqli_stmt_bind_param($stmt, "sssssss",$uid,$first, $pass, $last, $email, $dob);
+            mysqli_stmt_execute($stmt);
+        }
+    }
+    else {
+        $sql = "INSER INTO manager VALUES (?, ?, ?, ?, ? , ?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if (!mysqli_stmt_prepare($stmt, $sql)){
+            echo "SQL error 3";
+        }
+        else {
+            mysqli_stmt_bind_param($stmt, "sssssss",$uid,$first, $pass, $last, $dob, $email); // Hash pass if possible
+            mysqli_stmt_execute($stmt);
+        }
+
+    }
     // Error Handlers
     // 1. Check for empty fields
+    /*
     if (empty($first) || empty($last) || empty($dob) || empty($email) || empty($pass) || empty($uid)) { // if $input is empty
         header("Location: singup.html?signup=empty"); // sends user back to singup.html
         exit(); // closes off script after
@@ -48,7 +83,7 @@ if (isset($_POST['submit'])) { // if submit was pressed
                         mysqli_query($conn, $sql);
                         header("Location: signup.html?signup=successful");
                     }
-                    elseif ($radioVal = "Player"){
+                    elseif ($radioVal == "Player"){
                         $sql = "INSER INTO players VALUES ('$uid','$first','$dob','$last','$email','$hashedPass');";
                         mysqli_query($conn, $sql);
                         header("Location: signup.html?signup=successful");
@@ -63,7 +98,7 @@ if (isset($_POST['submit'])) { // if submit was pressed
                 }
             }
         }
-    }
+    }*/
 }else {
     header("Location: singup.html"); // sends user back to singup.html
     exit(); // closes off script after
