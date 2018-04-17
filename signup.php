@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) { // if submit was pressed
                 else {
 
                     $hashedPass = password_hash($pass, PASSWORD_DEFAULT); // hash the password
-                    $radioVal = $_POST[$user];
+                    $radioVal = $_POST[$user]; // increase the size in database e.g. VARCHAR(100)
                     if ($radioVal == "Referee"){
                         $sql = "INSER INTO referee VALUES ('$uid','$first','$hashedPass','$last','$email','$dob');";
                         mysqli_query($conn, $sql);

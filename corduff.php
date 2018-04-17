@@ -10,7 +10,7 @@ if($_POST){
     $comment = $_POST['commentContent'];
     $phoneno = $_POST['phoneno'];
     $email = $_POST['email'];
-    $handle = fopen("portraneComments.html","a");
+    $handle = fopen("corduffComments.html","a");
     fwrite($handle, "<b>" . $name . ' (' . $phoneno . ')' . ' (' . $email . ')' . "</b>:<br/>" . $comment . "<br/>");
     fclose($handle);
 }
@@ -23,7 +23,7 @@ if($_POST){
     <meta name="description" content="Find fixtures of Matches">
     <meta name="keywords" content="Matches, Locations">
     <meta name="author" content="Adam McCarthy">
-    <title>Football League | Portrane Athletic FC</title>
+    <title>Football League | Corduff FC</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -47,7 +47,7 @@ if($_POST){
 
 <section id="search">
     <div class="container">
-        <h1>Football League | Portrane Athletic FC</h1>
+        <h1>Football League | Corduff FC</h1>
         <form>
             <input type="word" placeholder="Search Fixtures...">
             <button type="search" class="button_1">Search </button>
@@ -56,27 +56,22 @@ if($_POST){
 </section>
 <section id="main">
 
-        <aside id="sidebar">
-            <div class="dark">
-                <h3>Contact Info</h4>
-                    <p><h4>Chairperson:</h4> Gerard Duke</p>
-                    <p><h4>Mobile:</h4> 086-8294399</p>
-                    <p> </p>
-                    <p><h4>Hon. Secretary:</h4> Anthony Moore</p>
-                    <p><h4>E-mail:</h4> info@portraneafc.com</p>
-                    <p><h4>Mobile:</h4> 087-1782838</p>
-            </div>
-        </aside>
+    <aside id="sidebar">
+        <div class="dark">
+            <h3>Contact Info</h4>
+
+        </div>
+    </aside>
     </div>
 
-<form action="" method="POST">
-    Comment: <textarea rows="10" cols="30" name="commentContent"></textarea><br/>
-    Name: <input type="text" name="name" placeholder="Name"><br/>
-    Phone no: <input type="text" name="phoneno" placeholder="+353861234567"><br/>
-    E-mail: <input type="text" name="email" placeholder="example@example.com"><br/>
-    <input type = "submit" value="Post!"><br/>
-</form>
-<?php include "portraneComments.html"; ?>
+    <form action="" method="POST">
+        Comment: <textarea rows="10" cols="30" name="commentContent"></textarea><br/>
+        Name: <input type="text" name="name" placeholder="Name"><br/>
+        Phone no: <input type="text" name="phoneno" placeholder="+353861234567"><br/>
+        E-mail: <input type="text" name="email" placeholder="example@example.com"><br/>
+        <input type = "submit" value="Post!"><br/>
+    </form>
+    <?php include "corduffComments.html"; ?>
 </section>
 <footer>
     <p>Football League, Copyright &copy; 2017</p>
