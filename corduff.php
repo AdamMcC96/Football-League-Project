@@ -16,12 +16,9 @@ if($_POST){
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Find fixtures of Matches">
-    <meta name="keywords" content="Matches, Locations">
     <meta name="author" content="Adam McCarthy">
     <title>Football League | Corduff FC</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
@@ -49,24 +46,15 @@ if($_POST){
 </header>
 
 
-<section id="search">
-    <div class="container">
-        <h1>Football League | Corduff FC</h1>
-        <form>
-            <input type="word" placeholder="Search Fixtures...">
-            <button type="search" class="button_1">Search </button>
-        </form>
-    </div>
-</section>
 <section id="main">
 
     <aside id="sidebar">
         <div class="dark">
-            <h3>Contact Info</h4>
+            <h4>Contact Info</h4>
 
         </div>
     </aside>
-    </div>
+
 
     <form action="" method="POST">
         Comment: <textarea rows="10" cols="30" name="commentContent"></textarea><br/>

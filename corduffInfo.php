@@ -5,10 +5,6 @@ session_start();  // needed in every page
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Find fixtures of Matches">
-    <meta name="keywords" content="Matches, Locations">
-    <meta name="author" content="Adam McCarthy">
     <title>Football League | Corduff FC</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -37,16 +33,6 @@ session_start();  // needed in every page
 </header>
 
 
-<section id="search">
-    <div class="container">
-        <h1>Football League | Corduff FC</h1>
-        <form>
-            <input type="word" placeholder="Search Fixtures...">
-            <button type="search" class="button_1">Search </button>
-        </form>
-    </div>
-</section>
-
 <section id="main">
     <div class="container">
         <article id="main-col">
@@ -59,12 +45,12 @@ session_start();  // needed in every page
         <aside id="sidebar">
             <div class="dark">
                 <h4>Contact Info</h4>
-                    <p><h4>Chairperson:</h4> Gerard Duke</p>
-                    <p><h4>Mobile:</h4> 086-8294399</p>
+                    <p><h4>Chairperson:</h4>  </p>
+                    <p><h4>Mobile:</h4> </p>
                     <p> </p>
-                    <p><h4>Hon. Secretary:</h4> Anthony Moore</p>
-                    <p><h4>E-mail:</h4> info@portraneafc.com</p>
-                    <p><h4>Mobile:</h4> 087-1782838</p>
+                    <p><h4>Hon. Secretary:</h4>  </p>
+                    <p><h4>E-mail:</h4> </p>
+                    <p><h4>Mobile:</h4> </p>
             </div>
         </aside>
     </div>

@@ -56,20 +56,6 @@ if (isset($_POST['submit'])) { // if submit was pressed
             }
         }
     }
-    /*$hashedPass = password_hash($pass, PASSWORD_DEFAULT); // hash the password
-    $sql = "SELECT * FROM players WHERE id = '$uid' AND pass = '$hashedPass'";
-    $result = mysqli_query($conn, $sql);
-    $resultCheck = mysqli_num_rows($result); // checks how much rows there is from the result
-    if ($resultCheck > 0) {
-        header("Location: login.html?invalid"); // sends user back to login.html
-        exit();
-    }else{
-
-        header("Location: indexPlayer.html?LoggedIn");
-
-        exit();
-    }*/
-
 
 }
 else {

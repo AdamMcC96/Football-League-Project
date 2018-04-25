@@ -5,9 +5,6 @@ session_start();  // needed in every page
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Find fixtures of Matches">
-    <meta name="keywords" content="Matches, Locations">
     <meta name="author" content="Adam McCarthy">
     <title>Football League | Swords Celtic FC</title>
     <link rel="stylesheet" href="css/style.css">
@@ -36,16 +33,6 @@ session_start();  // needed in every page
     </div>
 </header>
 
-
-<section id="search">
-    <div class="container">
-        <h1>Football League | Swords Celtic FC</h1>
-        <form>
-            <input type="word" placeholder="Search Fixtures...">
-            <button type="search" class="button_1">Search </button>
-        </form>
-    </div>
-</section>
 
 <section id="main">
     <div class="container">

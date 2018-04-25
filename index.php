@@ -2,21 +2,15 @@
 session_start();  // needed in every page
 ?>
 <!DOCTYPE html>
-<html ng-app="directoryApp">
-	<head>
 
+	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<meta name="description" content="Football League">
-		<meta name="keywords" content="Matches, Locations">
 		<meta name="author" content="Adam McCarthy, Paul Lupu">
 		<title>Football League | Welcome</title>
 		<link rel="stylesheet" href="css/style.css">
 
-
 	</head>
-
-	<body ng-controller="directoryController as dirList">
+    <body>
 
 		<header>
 			<div class="container">
@@ -44,23 +38,6 @@ session_start();  // needed in every page
 			<div class="container">
 				<h1></h1>
 				<p></p>
-			</div>
-		</section>
-
-		<section id="search">
-
-			<div class="container">
-				<h1>Search Fixtures</h1>
-			<form>
-				<input type="text" ng-model="search" placeholder="Search Fixtures...">
-
-
-
-		<button ng-hide="dirList.toggle" ng-click=" dirList.toggle = true" class="button_1">Search Again </button>
-
-
-			</form>
-
 			</div>
 		</section>
 

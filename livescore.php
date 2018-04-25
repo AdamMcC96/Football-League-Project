@@ -38,15 +38,7 @@ session_start();  // needed in every page
     </header>
 
 
-    <section id="search">
-        <div class="container">
-            <h1>Football League | Live Score</h1>
-            <form>
-                <input type="word" teamAholder="Search Fixtures...">
-                <button type="search" class="button_1">Search </button>
-            </form>
-        </div>
-    </section>
+
     <section id="main">
 
         <div class="container">
