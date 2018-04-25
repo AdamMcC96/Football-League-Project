@@ -40,19 +40,18 @@ session_start();  // needed in every page
         <article id="main-col">
             <h1 class="page-title">About Rush Athletic FC</h1>
             <p>
-                Rush Athletic Football Club is the largest soccer club in Northern Blanchardstown, Dublin. Rush Athletic FC was formed at senior level in 1976. Perhaps uniquely, Rush Athletic charges weekly fees rather than annual subscriptions so there are no upfront signing on fees, registration fees, insurance fees, and no training fee. Before any player kicks a football, everything is looked after. Equipment, insurance, league fees, pitch fees etc. are all paid for without imposing pressure on players and parents
+                Rush Athletic FC are a soccer club based in the town of Rush in North County Dublin. We cater for soccer players aged 6 upwards and have teams at all age levels up to seniors. We currently have 17 under age teams from U8 up to U18s, plus two senior teams. We also have some very successful girls and ladies teams, now normally in summer leagues. New players welcome, bring your boots. Rush Athletic have two pitches, a floodlit training pitch and two clubhouses. One of the clubhouses contains a small training facility for the younger teams.
             </p>
         </article>
 
         <aside id="sidebar">
             <div class="dark">
                 <h4>Contact Info</h4>
-                    <p><h4>Chairperson:</h4> </p>
-                    <p><h4>Mobile:</h4> </p>
+                    <p><h4>Chairperson:</h4> N/A</p>
+                    <p><h4>Mobile:</h4> 086-3009797 </p>
                     <p> </p>
-                    <p><h4>Hon. Secretary:</h4> </p>
-                    <p><h4>E-mail:</h4> </p>
-                    <p><h4>Mobile:</h4> </p>
+                    <p><h4>Hon. Secretary:</h4> Tony Colgan </p>
+                    <p><h4>E-mail:</h4> tonycolgan@hotmail.co.uk </p>
             </div>
         </aside>
     </div>

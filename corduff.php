@@ -48,22 +48,15 @@ if($_POST){
 
 <section id="main">
 
-    <aside id="sidebar">
-        <div class="dark">
-            <h4>Contact Info</h4>
-
-        </div>
-    </aside>
-
-
-    <form action="" method="POST">
-        Comment: <textarea rows="10" cols="30" name="commentContent"></textarea><br/>
-        Name: <input type="text" name="name" placeholder="Name"><br/>
-        Phone no: <input type="text" name="phoneno" placeholder="+353861234567"><br/>
-        E-mail: <input type="text" name="email" placeholder="example@example.com"><br/>
-        <input type = "submit" value="Post!"><br/>
-    </form>
-    <?php include "corduffComments.html"; ?>
+    <div id="comments">
+        <form action="" method="POST">
+            Comment: <input type="text" name="commentContent">Going to the match<br/>
+            Name: <input type="text" name="name" placeholder="Name"><br/>
+            Phone no: <input type="text" name="phoneno" placeholder="+353861234567"><br/>
+            E-mail: <input type="text" name="email" placeholder="example@example.com"><br/>
+            <input type = "submit" value="Post!"><br/>
+        </form>
+        <?php include "corduffComments.html"; ?></div>
 </section>
 <footer>
     <p>Football League, Copyright &copy; 2017</p>

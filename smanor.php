@@ -1,14 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Adam
- */
+
+session_start();  // needed in every page
+
 if($_POST){
     $name = $_POST['name'];
     $comment = $_POST['commentContent'];
     $phoneno = $_POST['phoneno'];
     $email = $_POST['email'];
-    $handle = fopen("leixlipComments.html","a");
+    $handle = fopen("smanorComments.html","a");
     fwrite($handle, "<b>" . $name . ' (' . $phoneno . ')' . ' (' . $email . ')' . "</b>:<br/>" . $comment . "<br/>");
     fclose($handle);
 }
@@ -18,7 +17,7 @@ if($_POST){
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Adam McCarthy">
-    <title>Football League | Leixlip United FC</title>
+    <title>Football League | Swords Manor FC</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,7 +28,7 @@ if($_POST){
         </div>
         <nav>
             <ul>
-                <li ><a href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
                 <li><a href="clubs.php">Clubs</a></li>
                 <?php
@@ -47,8 +46,6 @@ if($_POST){
 
 <section id="main">
 
-
-
     <div id="comments">
         <form action="" method="POST">
             Comment: <input type="text" name="commentContent">Going to the match<br/>
@@ -57,7 +54,7 @@ if($_POST){
             E-mail: <input type="text" name="email" placeholder="example@example.com"><br/>
             <input type = "submit" value="Post!"><br/>
         </form>
-        <?php include "leixlipComments.html"; ?></div>
+        <?php include "smanorComments.html"; ?></div>
 </section>
 <footer>
     <p>Football League, Copyright &copy; 2017</p>

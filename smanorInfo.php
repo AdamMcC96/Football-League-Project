@@ -36,17 +36,6 @@ session_start();  // needed in every page
     </div>
 </header>
 
-
-<section id="search">
-    <div class="container">
-        <h1>Football League | Swords Manor FC</h1>
-        <form>
-            <input type="word" placeholder="Search Fixtures...">
-            <button type="search" class="button_1">Search </button>
-        </form>
-    </div>
-</section>
-
 <section id="main">
     <div class="container">
         <article id="main-col">
