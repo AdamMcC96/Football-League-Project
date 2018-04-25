@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
-    <link rel="stylesheet" a href="css\login.css">
-    <link rel="stylesheet" a href="css\font-awesome.min.css">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.php">Home</a></li>
 </ul>
 <div class="container">
     <img src="img/user.png"/>
-    <form class="singup-form" action="signup.php" method="POST">
-        <input type="text" name="first" placeholder="Firstname">
-        <input type="text" name="last" placeholder="Lastname"><br>
-        <input type="date" name="DOB" placeholder="Date of Birth"><br>
-        <input type="text" name="email" placeholder="E-mail">
+    <form class="login-form" action="login.php" method="POST">
+        <input type="text" name="uid" placeholder="User ID">
         <input type="password" name="pass" placeholder="Password">
-        <input type="text" name="uid" placeholder="User ID"> <br>
-        <input type="radio" name="user" placeholder="Player" checked> Player
-        <input type="radio" name="user" placeholder="Referee"> Referee
-        <input type="radio" name="user" placeholder="Manager"> Manager <br>
         <br>
-        <button type="submit" name="submit">Sign Up</button>
+        <br>
+        <button type="submit" name="submit">Log In</button>
     </form>
 </div>
 </body>

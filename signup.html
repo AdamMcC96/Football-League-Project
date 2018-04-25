@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Sign Up</title>
-    <link rel="stylesheet" a href="css\login.css">
-    <link rel="stylesheet" a href="css\font-awesome.min.css">
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
 <div class="home">
 <ul>
-    <li><a href="index.html"><img src="img/home.png"></a></li>
-</ul></div>
+    <li><a href="index.php"><img src="img/home.png"></a></li>
+</ul>
+</div>
 <div class="container">
     <img src="img/user.png"/>
     <form class="singup-form" action="signup.php" method="POST">
@@ -19,11 +19,9 @@
         <input type="text" name="email" placeholder="E-mail">
         <input type="password" name="pass" placeholder="Password">
         <input type="text" name="uid" placeholder="User ID"> <br>
-        <input type="radio" name="user" placeholder="Player" checked> Player
-        <input type="radio" name="user" placeholder="Referee"> Referee
-        <input type="radio" name="user" placeholder="Manager"> Manager <br>
         <br>
         <button type="submit" name="submit">Sign Up</button><br>
+        <br>
         Already have an account? <a href="login.html">Login</a>
     </form>
 </div>

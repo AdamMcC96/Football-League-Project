@@ -1,52 +1,78 @@
 <?php
-header( 'Location: http://www.yoursite.com/redirect_location' ) ;
-$host="localhost";
-$user="user";
-$password="root";
-$db="groupproject";
+session_start();  // needed in every page
+if (isset($_POST['submit'])) { // if submit was pressed
+    include_once 'leaguedb.php';
+    $uid = mysqli_real_escape_string($conn, $_POST['uid']); // adds uid to datbase (all code is converted to text for security)
+    $pass = mysqli_real_escape_string($conn, $_POST['pass']); // adds pass to datbase (all code is converted to text for security)
 
-mysqli_connect($host,$user,$password);
-mysqli_select_db($db);
+    if (empty($uid) || empty($pass)) {
+        header("Location: login.html?login=empty");
+        exit(); // closes off script after
+    }else {
+        $sql ="SELECT * FROM players WHERE id = '$uid'";
+        $result= mysqli_query($conn, $sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck < 1){
+            $sql ="SELECT * FROM admin WHERE id = '$uid'";
+            $result= mysqli_query($conn, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            if ($resultCheck < 1){
+                header("Location: login.html?login=error");
+                exit(); // closes off script after
+            }else {
+                if ($row = mysqli_fetch_assoc($result)){
+                    // dehash the password
+                    $hashedPassCheck = password_verify($pass, $row['pass']);
+                    if ($hashedPassCheck == false){
+                        header("Location: login.html?login=password");
+                        exit(); // closes off script after
+                    } elseif ($hashedPassCheck == true) {
+                        // log in user
 
-if(isset($_POST['username'])){
-
-    $uname=$_POST['username'];
-    $password=$_POST['password'];
-
-    $sql="select * from loginform where user='".$uname."'AND Pass='".$password."' limit 1";
-
-    $result=mysql_query($sql);
-
-    if(mysql_num_rows($result)==1){
-        echo " You Have Successfully Logged in";
-        exit();
+                        $_SESSION['a_id'] = $row['id'];
+                        header("Location: index.php?login=successful");
+                        exit(); // closes off script after
+                    }
+                }
+            }
+        } else {
+            if ($row = mysqli_fetch_assoc($result)){
+                // dehash the password
+                $hashedPassCheck = password_verify($pass, $row['pass']);
+                if ($hashedPassCheck == false){
+                    header("Location: login.html?login=password");
+                    exit(); // closes off script after
+                } elseif ($hashedPassCheck == true) {
+                    // log in user
+                   # $_SESSION['p_pid'] = $row['pid'];
+                    $_SESSION['p_firstName'] = $row['firstName'];
+                    $_SESSION['p_dob'] = $row['DOB'];
+                    $_SESSION['p_lastName'] = $row['secondName'];
+                    $_SESSION['p_email'] = $row['email'];
+                    $_SESSION['p_id'] = $row['id'];
+                    header("Location: index.php?login=successful");
+                    exit(); // closes off script after
+                }
+            }
+        }
     }
-    else{
-        echo " You Have Entered Incorrect Password";
+    /*$hashedPass = password_hash($pass, PASSWORD_DEFAULT); // hash the password
+    $sql = "SELECT * FROM players WHERE id = '$uid' AND pass = '$hashedPass'";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result); // checks how much rows there is from the result
+    if ($resultCheck > 0) {
+        header("Location: login.html?invalid"); // sends user back to login.html
         exit();
-    }
+    }else{
+
+        header("Location: indexPlayer.html?LoggedIn");
+
+        exit();
+    }*/
+
 
 }
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Login Form in HTML5 and CSS3</title>
-    <link rel="stylesheet" a href="css\login.css">
-    <link rel="stylesheet" a href="css\font-awesome.min.css">
-</head>
-<body>
-<div class="container">
-    <img src="image/login.png"/>
-    <form>
-        <div class="form-input">
-            <input type="text" name="text" placeholder="Enter the User Name"/>
-        </div>
-        <div class="form-input">
-            <input type="password" name="password" placeholder="password"/>
-        </div>
-        <input type="submit" type="submit" value="LOGIN" class="btn-login"/>
-    </form>
-</div>
-</body>
-</html>
+else {
+    header("Location: login.html?login=error");
+    exit(); // closes off script after
+}

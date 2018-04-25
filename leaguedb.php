@@ -2,7 +2,7 @@
 /**
  * User: Adam
  */
-$dbServername = "localhost";
+$dbServername = "";
 $dbUsername = "root";
 $dbPassword = "root";
 $dbName = "groupproject";

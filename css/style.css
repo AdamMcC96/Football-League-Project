@@ -1,189 +1,180 @@
 body{
-	font: 15px/1.5 Arial, Helvetica, sans-serif;
-	padding: 0;
-	margin: 0;
-	background-color: #f4f4f4;
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
 }
 /*Global */
 #main-col li {
-	display: inline;
+    display: inline;
 }
 ul {
-				list-style: none;
-				
-			}
-			li {
-				display: flex;
-				margin-bottom: 10px;
-			}
-			li span {
-				display: inline-block;
-				line-height: 50px;
-			}
-
-			li img {
-				margin-right: 50px;
-				margin-left: 20px;
-				border-radius: 50%;
-				width: 50px;
-				height: 50px;
-			}
-			
-
+    list-style: none;
 }
+li {
+    display: flex;
+    margin-bottom: 10px;
+}
+li span {
+    display: inline-block;
+    line-height: 50px;
+}
+
+li img {
+    margin-right: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
 
 .hidden {
-				display: none;
-			}
-
-.container{
-	width: 80%;
-	margin: auto;
-	overflow: hidden;
+    display: none;
 }
 
-
-
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
 .button_1{
-	height: 38px;
-	background: #e8491d;
-	border: 0;
-	padding-left: 20px;
-	padding-right: 20px;
-	color: #ffffff;
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
 }
 
 .dark{
-	padding: 15px;
-	background:#35424a;
-	color:#ffffff;
-	margin-top: 10px;
-	margin-bottom: 10px;
+    padding: 15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /*Header */
 header{
-	background: #35424a;
-	color:#ffffff;
-	padding-top: 30px;
-	min-height: 70px;
-	border-bottom: #e8491d 3px solid;
+    background: #35424a;
+    color:#ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
 }
 
 header a{
-	color: #ffffff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-
-
 header li{
-	float: left;
-	display: inline;
-	padding: 0 20px 0 20px;
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
 }
 
 header #branding{
-	float: left;
+    float: left;
 }
 
 header #branding h1{
-	margin: 0;
+    margin: 0;
 }
 
 header nav{
-	float: right;
-	margin-top: 10px;
+    float: right;
+    margin-top: 10px;
 }
 
 header .highlight, header .current a{
-	color:#FFD700;
-	font-weight: : bold;
+    color:#FFD700;
+    font-weight: bold;
 }
 
 header a:hover{
-	color: #cccccc;
-	font-weight: bold;
+    color: #cccccc;
+    font-weight: bold;
 
 }
 
 /*Showcase*/
 
 #showcase{
-	min-height: 400px;
-	background:url('../img/showcase.jpg') no-repeat 0 -110px;
-	text-align: center;
-	color: #808080;
+    min-height: 400px;
+    background:url('../img/showcase.jpg') no-repeat 0 -110px;
+    text-align: center;
+    color: #808080;
 }
 
 #showcase h1{
-	margin-top: 100px;
-	font-size:55px;
-	margin-bottom:10px;
+    margin-top: 100px;
+    font-size:55px;
+    margin-bottom:10px;
 }
 
 #showcase p{
-	font-size: 20px;
+    font-size: 20px;
 }
 
 /*Search*/
 
 #search{
-	padding: 15px;
-	color: #ffffff;
-	background: #35424a;
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
 }
 
 #search h1{
-	float: left;
+    float: left;
 }
 
 #search form{
-	float: right;
-	margin-top: 15px;
+    float: right;
+    margin-top: 15px;
 }
 
 #search input{
-	padding: 4px;
-	height: 25px;
-	width: 250px;
+    padding: 4px;
+    height: 25px;
+    width: 250px;
 }
 
 /* Boxes*/
 
 #boxes{
-	margin-top: 20px;
+    margin-top: 20px;
 }
 #boxes .box{
-	float: left;
-	text-align: center;
-	width: 30%;
-	padding: 10px;
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
 }
 
 #boxes .box img{
-	width: 90px;
+    width: 90px;
 }
 /*Sidebar*/
 aside#sidebar{
-	float: right;
-	width: 30%;
-	margin-top: 10px;
+    float: right;
+    width: 30%;
+    margin-top: 10px;
 }
 /* Main-column*/
 article#main-col{
-	float: left;
-	width: 65%;
+    float: left;
+    width: 65%;
 }
 footer{
-	padding: 20px;
-	margin-top: 20px;
-	color: #ffffff;
-	background-color: #e8491d;
-	text-align: center;
-
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
 }
 /*Media*/
 @media(max-width: 768px) {
@@ -207,24 +198,14 @@ footer{
     #showcase h1 {
         margin-top: 40px;
     }
+
     #search button {
         display: block;
         width: 100%;
     }
+
     #search form input {
         width: 100%;
         margin-bottom: 5px;
     }
-    th, td {
-        padding: 10px;
-    }
-    th {
-        background-color: black;
-        color: #ffe221;
-    }
-
-
-
-
-
-	
+}

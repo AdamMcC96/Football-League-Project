@@ -1,10 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: adamm
- * Date: 02/04/2018
- * Time: 15:48
- */
+
+session_start();  // needed in every page
+
 if($_POST){
     $name = $_POST['name'];
     $comment = $_POST['commentContent'];
@@ -34,10 +31,17 @@ if($_POST){
         </div>
         <nav>
             <ul>
-                <li ><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="current"><a href="clubs.html">Clubs</a></li>
-                <li ><a href="login.html">Login/Sign Up</a></li>
+                <li ><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="clubs.php">Clubs</a></li>
+                <?php
+                if(isset($_SESSION['p_id']) || isset($_SESSION['a_id'])){
+                    echo '<li><a href="logout.html">Logout</a></li>
+                          <li><a href="profile.php"><img src="img/user.png"/></a></li>';
+                }else {
+                    echo '<li><a href="signup.html">Sign Up</a></li>
+						    <li><a href="login.html">Login</a></li>';
+                }?>
 
             </ul>
         </nav>

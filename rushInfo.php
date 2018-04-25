@@ -1,16 +1,5 @@
 <?php
-
 session_start();  // needed in every page
-
-if($_POST){
-    $name = $_POST['name'];
-    $comment = $_POST['commentContent'];
-    $phoneno = $_POST['phoneno'];
-    $email = $_POST['email'];
-    $handle = fopen("portraneComments.html","a");
-    fwrite($handle, "<b>" . $name . ' (' . $phoneno . ')' . ' (' . $email . ')' . "</b>:<br/>" . $comment . "<br/>");
-    fclose($handle);
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +9,7 @@ if($_POST){
     <meta name="description" content="Find fixtures of Matches">
     <meta name="keywords" content="Matches, Locations">
     <meta name="author" content="Adam McCarthy">
-    <title>Football League | Portrane Athletic FC</title>
+    <title>Football League | Rush Athletic FC</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -50,14 +39,22 @@ if($_POST){
 
 <section id="search">
     <div class="container">
-        <h1>Football League | Portrane Athletic FC</h1>
+        <h1>Football League | Rush Athletic FC</h1>
         <form>
             <input type="word" placeholder="Search Fixtures...">
             <button type="search" class="button_1">Search </button>
         </form>
     </div>
 </section>
+
 <section id="main">
+    <div class="container">
+        <article id="main-col">
+            <h1 class="page-title">About Rush Athletic FC</h1>
+            <p>
+                Rush Athletic Football Club is the largest soccer club in Northern Blanchardstown, Dublin. Rush Athletic FC was formed at senior level in 1976. Perhaps uniquely, Rush Athletic charges weekly fees rather than annual subscriptions so there are no upfront signing on fees, registration fees, insurance fees, and no training fee. Before any player kicks a football, everything is looked after. Equipment, insurance, league fees, pitch fees etc. are all paid for without imposing pressure on players and parents
+            </p>
+        </article>
 
         <aside id="sidebar">
             <div class="dark">
@@ -71,16 +68,9 @@ if($_POST){
             </div>
         </aside>
     </div>
-
-<form action="" method="POST">
-    Comment: <textarea rows="10" cols="30" name="commentContent"></textarea><br/>
-    Name: <input type="text" name="name" placeholder="Name"><br/>
-    Phone no: <input type="text" name="phoneno" placeholder="+353861234567"><br/>
-    E-mail: <input type="text" name="email" placeholder="example@example.com"><br/>
-    <input type = "submit" value="Post!"><br/>
-</form>
-<?php include "portraneComments.html"; ?>
+    <a href="rush.php"><img src="img/carpool.png"></a>
 </section>
+
 <footer>
     <p>Football League, Copyright &copy; 2017</p>
 </footer>
